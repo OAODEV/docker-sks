@@ -6,4 +6,6 @@ run apt-get install -y sks
 run sks build
 run chown -Rc debian-sks:debian-sks /var/lib/sks/DB
 
+add Manifest /Manifest
+
 cmd sks db
