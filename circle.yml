@@ -16,3 +16,9 @@ dependencies:
 test:
   override:
     - docker run r.iadops.com/$herd_service_name:$herd_build_tag $herd_unittest_cmd
+
+deployment:
+  index:
+    branch: /.*/
+    commands:
+      - docker push r.iadops.com/hello:$herd_build_tag
