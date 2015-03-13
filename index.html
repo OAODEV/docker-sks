@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>OAO PGP Key Server</title>
+    <!--base href="http://pgp.iadops.com"-->
+  </head>
+
+  <h1>OAO PGP Public Key Server</h1>
+
+  <hr>
+  <h3><a name="extract">Extract a key</a></h3>
+
+  <form action="/pks/lookup" method="GET">
+
+    Search String: <input name="search" size=40>
+    <input type="submit" value="Do the search!"><p>
+
+      Index: <input type="radio" name="op" value="index" checked>
+      Verbose Index: <input type="radio" name="op" value="vindex"><p>
+
+      <input type="checkbox" name="fingerprint"> Show PGP fingerprints
+      for keys <p>
+
+      <input type="checkbox" name="exact"> Only return exact matches <p>
+
+  </form>
+
+  <hr>
+  <h3><a name="submit">Submit a key</a></h3>
+  <form action="/pks/add" method="POST">
+
+    Enter ASCII-armored PGP key here: <p>
+      <textarea name="keytext" rows=20 cols=66></textarea><p>
+
+      <input type="reset" value="Clear">
+      <input type="submit" value="Submit this key to the keyserver!"><p>
+
+  </form>
+
+</html>
